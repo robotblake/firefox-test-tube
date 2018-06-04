@@ -10,8 +10,8 @@ jobs:
 
       - run: cp backend.env.dist backend.env
 
-      - run: docker-compose run server flake8 backend
+      - run: docker-compose run app flake8 backend
 
-      - run: docker-compose run python manage.py test
+      - run: docker-compose run app python manage.py test
 #      - run: coverage run ./manage.py test
 #      - run: coverage xml && curl -s https://codecov.io/bash | bash -

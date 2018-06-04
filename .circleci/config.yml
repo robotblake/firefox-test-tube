@@ -3,10 +3,6 @@ jobs:
   build:
     docker:
       - image: docker/compose:1.19.0
-      - image: circleci/postgres:9.5
-        environment:
-        - POSTGRES_USER: postgres
-        - POSTGRES_DB: db
     steps:
       - setup_remote_docker
 
